@@ -66,9 +66,9 @@ function shortAddress(address: Address) {
 function Nav({ isMiniPay, account, onConnect }: { isMiniPay: boolean; account: Address | null; onConnect: () => void }) {
   return (
     <nav className="nav">
-      <a className="nav-brand" href="#top" aria-label="Celo Impact Jar home">
+      <a className="nav-brand" href="#top" aria-label="KindJar home">
         <span className="brand-mark">◎</span>
-        <span>Celo Impact Jar</span>
+        <span>KindJar</span>
       </a>
       <div className="nav-links">
         <a href="#donate">Donate</a>
@@ -108,7 +108,7 @@ function Hero() {
         <div className="phone-frame">
           <div className="phone-top" />
           <div className="phone-card active">
-            <span className="mini-label">Impact Jar</span>
+            <span className="mini-label">KindJar</span>
             <strong>Community Food</strong>
             <div className="mini-progress"><span style={{ width: '82%' }} /></div>
             <small>128.75 cUSD raised</small>
@@ -216,7 +216,7 @@ function About() {
     <section className="panel" id="about">
       <div className="section-kicker">Why it matters</div>
       <h2>Built for practical Celo usage, not just a demo.</h2>
-      <p className="subtitle">Celo Impact Jar focuses on small payments, transparent public-good funding, and mobile-first UX for MiniPay users.</p>
+      <p className="subtitle">KindJar focuses on small payments, transparent public-good funding, and mobile-first UX for MiniPay users.</p>
       <div className="features">
         <div className="feature-card"><div className="feature-icon">📱</div><strong>MiniPay Ready</strong><span>Detects MiniPay and reduces wallet friction for mobile-first donors.</span></div>
         <div className="feature-card"><div className="feature-icon">🤖</div><strong>AI Donation Advisor</strong><span>Ranks jars, explains risk, and guides users with campaign intelligence.</span></div>
@@ -336,7 +336,7 @@ function App() {
         <ContractInfo />
       </main>
       <footer className="footer">
-        <div className="footer-left">Celo Impact Jar © 2026 — Built for Celo Proof of Ship</div>
+        <div className="footer-left">KindJar © 2026 — Built for Celo Proof of Ship</div>
         <div className="footer-links">
           <a href="https://github.com/ulsreall/celo-impact-jar" target="_blank" rel="noreferrer">GitHub</a>
           <a href={explorerUrl} target="_blank" rel="noreferrer">Contract</a>

@@ -115,7 +115,7 @@ export default function AgentChat({ campaigns, walletConnected, isMiniPay, selec
             <div className="agent-header-left">
               <span className="agent-avatar">🤖</span>
               <div>
-                <div className="agent-name">Impact Jar AI Agent</div>
+                <div className="agent-name">KindJar AI Agent</div>
                 <div className="agent-status">
                   <span className="dot-live" /> {walletConnected ? 'Wallet connected' : 'Ready to help'}
                 </div>
@@ -163,7 +163,7 @@ export default function AgentChat({ campaigns, walletConnected, isMiniPay, selec
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask me anything about Impact Jar..."
+              placeholder="Ask me anything about KindJar..."
               disabled={isTyping}
             />
             <button type="submit" disabled={isTyping || !input.trim()}>

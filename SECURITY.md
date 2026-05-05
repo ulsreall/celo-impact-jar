@@ -1,6 +1,6 @@
 # Security Policy
 
-Celo Impact Jar is a self-custody donation app. Users should always verify transactions before signing.
+KindJar is a self-custody donation app. Users should always verify transactions before signing.
 
 ## User safety principles
 

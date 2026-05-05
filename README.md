@@ -1,4 +1,6 @@
-# Celo Impact Jar
+# KindJar
+
+**Small giving, real local impact — powered by Celo.**
 
 A MiniPay-compatible micro-donation dApp for local impact campaigns on Celo. Users can support community jars with stablecoins, while the built-in AI Agent helps donors understand campaign signals, safety, and donation flow.
 
@@ -8,7 +10,7 @@ A MiniPay-compatible micro-donation dApp for local impact campaigns on Celo. Use
 
 ## Why this exists
 
-Celo Impact Jar is designed for the Celo Proof of Ship builder program: practical, mobile-first, stablecoin payments for real people and local communities.
+KindJar is designed for the Celo Proof of Ship builder program: practical, mobile-first, stablecoin payments for real people and local communities.
 
 Example use cases:
 

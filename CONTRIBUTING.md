@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for checking out Celo Impact Jar.
+Thanks for checking out KindJar.
 
 ## Local setup
 

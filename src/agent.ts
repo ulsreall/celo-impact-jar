@@ -1,4 +1,4 @@
-// AI Agent Engine for Celo Impact Jar
+// AI Agent Engine for KindJar
 // Intelligent rules-based agent that analyzes campaigns, recommends jars,
 // and guides users through the donation process.
 
@@ -126,7 +126,7 @@ function generateAnalysis(ctx: AgentContext): string {
 
 function getDonationGuide(ctx: AgentContext): string {
   const selected = ctx.campaigns.find((c) => c.id === ctx.selectedCampaignId);
-  let guide = `🎯 **How to Donate on Celo Impact Jar**\n\n`;
+  let guide = `🎯 **How to Donate on KindJar**\n\n`;
 
   if (!ctx.walletConnected) {
     guide += `📱 **Step 1: Connect your wallet**\n`;
@@ -186,11 +186,11 @@ function getJarAdvice(ctx: AgentContext, query: string): string {
   }
 
   if (q.includes('safe') || q.includes('aman') || q.includes('scam') || q.includes('trust') || q.includes('legit')) {
-    return `🔒 **Safety on Celo Impact Jar**\n\n✅ All contracts are open-source on GitHub\n✅ Every donation is onchain — verifiable on Celoscan\n✅ Self-custody: YOU sign every transaction\n✅ No seed phrases stored, no custody risk\n✅ Contract: 0xf2b6...040 on Celo Mainnet\n\nYou can verify every transaction yourself at celoscan.io. That's the beauty of onchain transparency!`;
+    return `🔒 **Safety on KindJar**\n\n✅ All contracts are open-source on GitHub\n✅ Every donation is onchain — verifiable on Celoscan\n✅ Self-custody: YOU sign every transaction\n✅ No seed phrases stored, no custody risk\n✅ Contract: 0xf2b6...040 on Celo Mainnet\n\nYou can verify every transaction yourself at celoscan.io. That's the beauty of onchain transparency!`;
   }
 
   if (q.includes('what') || q.includes('apa') || q.includes('tentang') || q.includes('about') || q.includes('siapa')) {
-    return `🌱 **What is Celo Impact Jar?**\n\nA MiniPay-compatible micro-donation platform on Celo. Think of it as "tip jars for real-world impact" — small stablecoin donations that fund local campaigns.\n\n**Key features:**\n• Works on MiniPay (14M+ users)\n• Donate with cUSD, USDm, USDC, USDT\n• Every donation is onchain & transparent\n• 3 steps: Pick jar → Set amount → Send\n\nBuilt for **Celo Proof of Ship** 🚢`;
+    return `🌱 **What is KindJar?**\n\nA MiniPay-compatible micro-donation platform on Celo. Think of it as "tip jars for real-world impact" — small stablecoin donations that fund local campaigns.\n\n**Key features:**\n• Works on MiniPay (14M+ users)\n• Donate with cUSD, USDm, USDC, USDT\n• Every donation is onchain & transparent\n• 3 steps: Pick jar → Set amount → Send\n\nBuilt for **Celo Proof of Ship** 🚢`;
   }
 
   // Default: full analysis
@@ -199,7 +199,7 @@ function getJarAdvice(ctx: AgentContext, query: string): string {
 
 // ─── Main Agent Function ────────────────────────────────────────────
 
-const WELCOME_MSG = `👋 **Hi! I'm the Impact Jar AI Agent.**
+const WELCOME_MSG = `👋 **Hi! I'm the KindJar AI Agent.**
 
 I help you make smarter donations on Celo. Here's what I can do:
 
@@ -207,7 +207,7 @@ I help you make smarter donations on Celo. Here's what I can do:
 • 🌟 **Recommend jars** — get personalized suggestions
 • 🎯 **Guide donations** — step-by-step help
 • 🔍 **Check safety** — verify onchain transparency
-• 💡 **Answer questions** — anything about Celo Impact Jar
+• 💡 **Answer questions** — anything about KindJar
 
 **Try asking me:**
 • "Which jar should I donate to?"
@@ -235,7 +235,7 @@ export function createAgent() {
 
     // Quick commands
     if (q === 'hi' || q === 'hello' || q === 'gm' || q === 'hey' || q === 'halo') {
-      content = `Hey! 👋 Welcome to Celo Impact Jar. I'm your AI donation advisor.\n\nWhat would you like to do?\n• 📊 See campaign analysis\n• 🌟 Get jar recommendation\n• 🎯 Learn how to donate\n• 🔒 Check if it's safe`;
+      content = `Hey! 👋 Welcome to KindJar. I'm your AI donation advisor.\n\nWhat would you like to do?\n• 📊 See campaign analysis\n• 🌟 Get jar recommendation\n• 🎯 Learn how to donate\n• 🔒 Check if it's safe`;
       suggestions = ['Analyze all campaigns', 'Which jar should I donate to?', 'How do I donate?', 'Is this safe?'];
     } else if (q.includes('analyz') || q.includes('analys') || q.includes('analisis') || q.includes('report') || q.includes('overview') || q.includes('all')) {
       content = generateAnalysis(ctx);
@@ -260,7 +260,7 @@ export function createAgent() {
       content = `📱 **MiniPay & Wallet Info**\n\n${ctx.isMiniPay ? '✅ MiniPay detected! Your wallet auto-connects — just approve the donation.' : ctx.walletConnected ? '✅ Wallet connected. You\'re ready to donate!' : '⚠️ No wallet connected yet.'}\n\n**How to connect:**\n• Open this page in MiniPay (auto-connect)\n• Or use any Celo-compatible browser wallet\n• Click "Connect Wallet" in the nav\n\n**Supported wallets:**\n• MiniPay (recommended — 14M+ users)\n• MetaMask (with Celo network)\n• Valora\n• Any injected wallet`;
       suggestions = ['How do I donate?', 'Is this safe?'];
     } else if (q.includes('celo') || q.includes('stablecoin') || q.includes('cusd') || q.includes('usdm')) {
-      content = `⛓️ **About Celo & Stablecoins**\n\nCelo is a mobile-first blockchain built for real-world payments. Celo Impact Jar uses:\n\n• **cUSD** — Celo Dollar (native stablecoin)\n• **USDm** — MiniPay stablecoin\n• **USDC / USDT** — also supported\n\nAll on **Celo Mainnet (chain ID: 42220)** — fast, low fees, carbon-negative.\n\nMiniPay is Opera's self-custodial stablecoin wallet with 14M+ global users. Perfect for micro-donations!`;
+      content = `⛓️ **About Celo & Stablecoins**\n\nCelo is a mobile-first blockchain built for real-world payments. KindJar uses:\n\n• **cUSD** — Celo Dollar (native stablecoin)\n• **USDm** — MiniPay stablecoin\n• **USDC / USDT** — also supported\n\nAll on **Celo Mainnet (chain ID: 42220)** — fast, low fees, carbon-negative.\n\nMiniPay is Opera's self-custodial stablecoin wallet with 14M+ global users. Perfect for micro-donations!`;
       suggestions = ['How do I donate?', 'Analyze all campaigns'];
     } else {
       // Smart fallback — try to help anyway
