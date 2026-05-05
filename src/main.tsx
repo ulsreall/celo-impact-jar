@@ -12,6 +12,8 @@ import {
 } from 'viem';
 import { celo } from 'viem/chains';
 import { ERC20_ABI, IMPACT_JAR_ABI } from './abi';
+import AgentInsights from './AgentInsights';
+import AgentChat from './AgentChat';
 import './styles.css';
 
 declare global {
@@ -20,7 +22,7 @@ declare global {
   }
 }
 
-type Campaign = {
+export type Campaign = {
   id: bigint;
   name: string;
   description: string;
@@ -45,6 +47,7 @@ function Nav({ isMiniPay, onConnect }: { isMiniPay: boolean; onConnect: () => vo
       <div className="nav-brand"><span className="dot" /> Celo Impact Jar</div>
       <div className="nav-links">
         <a href="#donate">Donate</a>
+        <a href="#agent" className="agent-link">🤖 AI Agent</a>
         <a href="#about">About</a>
         <a href="https://github.com/ulsreall/celo-impact-jar" target="_blank">GitHub</a>
         {!isMiniPay && <button className="btn-primary" onClick={onConnect}>Connect Wallet</button>}
@@ -179,6 +182,9 @@ function App() {
           </div>
         </section>
 
+        {/* AI Agent Insights */}
+        <AgentInsights campaigns={campaigns} />
+
         {/* Features */}
         <section className="panel" id="about">
           <h2>Why Celo Impact Jar?</h2>
@@ -264,6 +270,15 @@ function App() {
           <a href="https://docs.celo.org" target="_blank">Celo Docs</a>
         </div>
       </footer>
+      {/* AI Agent Chat Widget */}
+      <AgentChat
+        campaigns={campaigns}
+        walletConnected={!!account}
+        isMiniPay={isMiniPay}
+        selectedCampaignId={selectedCampaign}
+        onSelectCampaign={(id) => setSelectedCampaign(id)}
+      />
+
     </>
   );
 }

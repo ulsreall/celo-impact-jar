@@ -4,7 +4,7 @@ MiniPay-compatible Celo mini app for community impact jars and stablecoin micro-
 
 ## Live
 
-- **App:** https://celo-impact-jar.vercel.app/
+- **App:** http://43.153.202.101
 - **Contract:** [0xf2b690a0b0cab089ccb84beec5b40afcb9661040](https://celoscan.io/address/0xf2b690a0b0cab089ccb84beec5b40afcb9661040)
 - **Network:** Celo Mainnet (Chain ID 42220)
 
